@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  timelapse-builder:
+    build: .
+    volumes:
+      - ./snapshots:/home/node/app/snapshots
+    env_file:
+      - .env
