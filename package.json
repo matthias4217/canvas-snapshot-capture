@@ -1,5 +1,5 @@
 {
-  "name": "timelapse-builder",
+  "name": "canvas-snapshots-capture",
   "version": "1.0.0",
   "description": "Collects frames from canvas to create timelapses. See https://github.com/Al3xCalibur/CanvasReplace for informations on the canvas",
   "main": "src/index.js",
