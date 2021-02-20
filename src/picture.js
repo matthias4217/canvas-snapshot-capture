@@ -9,6 +9,7 @@ const INSTANCES_FILE = process.env.INSTANCES_FILE;
 function getPicture(canvasUrl, savePath) {
 
 	https.get(canvasUrl, (res) => {
+
 		let jsonText = '';
 		res.on('data', (d) => {
 			jsonText += d;
@@ -54,11 +55,13 @@ function getPicture(canvasUrl, savePath) {
 			let time = datetimeISO.split('T')[1].split('.')[0].split(':').join('-');
 			fs.writeFileSync(`./snapshots/${savePath}/${date}-${time}.png`, buffer);
 		})
+	}).on('error', (err) => {
+		console.log(err);
 	});
 }
 
 function saveFrameInstance(canvasUrl, savePath) {
-	getPicture(canvasUrl, savePath);
+		getPicture(canvasUrl, savePath);
 }
 
 function saveAllFrames() {

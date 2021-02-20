@@ -8,7 +8,7 @@
     "start": "node src/index.js"
   },
   "author": "Matthias4217",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "dotenv": "^8.2.0",
     "node-cron": "^2.0.3",
